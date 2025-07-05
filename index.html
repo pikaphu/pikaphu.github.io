@@ -1,29 +1,54 @@
 <meta name="robots" content="noindex">
 
-<h1 id="sample-markdown">Sample Markdown</h1>
-<p>This is some basic, sample markdown.</p>
-<h2 id="second-heading">Second Heading</h2>
-<ul>
-<li>Unordered lists, and:<ol>
-<li>One</li>
-<li>Two</li>
-<li>Three</li>
-</ol>
-</li>
-<li>More</li>
-</ul>
+<h1 id="sample-markdown"> &lt;h1&gt; Sample Markdown &lt;/h1&gt; </h1>
+
+<p> &lt;p&gt; This is some basic, sample markdown. &lt;/p&gt; </p>
+
+<h2 id="second-heading"> &lt;h2&gt; Second Heading &lt;/h2&gt; </h2>
+
+<ul> &lt;ul&gt;
+   <li>&lt;li&gt; Unordered lists, and:
+      <ol> &lt;ol&gt; Orderedlist
+         <li>&lt;li&gt;One&lt;/li&gt; </li>
+         <li>&lt;li&gt;Two&lt;/li&gt; </li>
+         <li>&lt;li&gt;Three&lt;/li&gt; </li>
+         &lt;/ol&gt;
+      </ol>
+   </li> &lt;/li&gt;
+   <li> &lt;li&gt;More&lt;/li&gt; </li>
+</ul> &lt;/ul&gt;
+
 <blockquote>
-<p>Blockquote</p>
+   &lt;blockquote&gt;
+   <p> &lt;p&gt;Blockquote&lt;/p&gt; </p>
+   &lt;/blockquote&gt;
 </blockquote>
-<p>And <strong>bold</strong>, <em>italics</em>, and even <em>italics and later <strong>bold</strong></em>. Even <del>strikethrough</del>. <a href="https://markdowntohtml.com">A link</a> to somewhere.</p>
+
+<p><strong>&lt;strong&gt;bold&lt;/strong&gt;</strong> </p>
+<p><em>&lt;em&gt;italics&lt;/em&gt;</em> </p>
+<p><em>&lt;em&gt;italics and later <strong>&lt;strong&gt;bold&lt;/strong&gt;&lt;/em&gt;. </strong></em>.
+</p>
+<p> <del>&lt;del&gt;strikethrough&lt;/del&gt;</del> </p>
+<p> <a href="https://markdowntohtml.com">A link</a> .
+   lt;a href=&quot;https://markdowntohtml.com&quot;&gt;A link&lt;/a&gt;
+</p>
+
 <p>And code highlighting:</p>
-<pre><code class="lang-js"><span class="hljs-keyword">var</span> foo = <span class="hljs-string">'bar'</span>;
+
+<pre>&lt;pre&gt;
+   <code class="lang-js"> &lt;code&gt;
+      <span class="hljs-keyword">var</span> foo = <span class="hljs-string">'bar'</span>;
 
 <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">baz</span><span class="hljs-params">(s)</span> </span>{
    <span class="hljs-keyword">return</span> foo + <span class="hljs-string">':'</span> + s;
 }
-</code></pre>
-<p>Or inline code like <code>var foo = &#39;bar&#39;;</code>.</p>
+&lt;/code&gt;</code> 
+&lt;/pre&gt;</pre>
+
+<p>Or inline code like <code> &lt;code&gt; var foo = &#39;bar&#39;; &lt;/code&gt;</code>.</p>
+
 <p>Or an image of bears</p>
 <p><img src="http://placebear.com/200/200" alt="bears"></p>
+&lt;p&gt;&lt;img src=&quot;http://placebear.com/200/200&quot; alt=&quot;bears&quot;&gt;&lt;/p&gt;
+
 <p>The end ...</p>
