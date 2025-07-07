@@ -1,4 +1,4 @@
-<a href="https://pikaphu.github.io" target="_blank"> pikaphu.github.io </a>
+<a onclick="window.open(this.href,'_blank');return false;" href="https://pikaphu.github.io" target="_blank"> pikaphu.github.io </a>
 
 ref: https://markdowntohtml.com/
 
