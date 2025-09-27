@@ -1,42 +1,78 @@
-<meta name="robots" content="noindex">
+<style>
+  :root {
+    --bg-color: #fff;
+    --text-color: #222;
+    /* --color-fg-default: #222; */
+  }
+  [data-theme="dark"] {
+    --bg-color: #222;
+    --text-color: #fff;
+    /* --color-fg-default: #fff; */
+  }
+
+  :where(html, body, #myroot *):not(code,pre, pre *) {
+    background: var(--bg-color) !important;
+    color: var(--text-color) !important;
+    transition: background 0.3s, color 0.3s;
+  }
+  #theme-toggle {
+    background: var(--bg-color);
+    color: var(--text-color);
+    border: 1px solid var(--text-color);
+    padding: 8px 16px;
+    border-radius: 6px;
+    cursor: pointer;
+  }
+</style>
+<meta name="robots" content="noindex" />
 <github-md>
+  <div id="myroot">
+    <h1 id="sample-markdown">&lt;h1&gt; Sample Markdown &lt;/h1&gt;</h1>
 
-   <h1 id="sample-markdown"> &lt;h1&gt; Sample Markdown &lt;/h1&gt; </h1>
+    <p>&lt;p&gt; This is some basic, sample markdown. &lt;/p&gt;</p>
 
-   <p> &lt;p&gt; This is some basic, sample markdown. &lt;/p&gt; </p>
+    <h2 id="second-heading">&lt;h2&gt; Second Heading &lt;/h2&gt;</h2>
 
-   <h2 id="second-heading"> &lt;h2&gt; Second Heading &lt;/h2&gt; </h2>
+    <ul>
+      &lt;ul&gt;
+      <li>
+        &lt;li&gt; Unordered lists, and:
+        <ol>
+          &lt;ol&gt; Orderedlist
+          <li>&lt;li&gt;One&lt;/li&gt;</li>
+          <li>&lt;li&gt;Two&lt;/li&gt;</li>
+          <li>&lt;li&gt;Three&lt;/li&gt;</li>
+          &lt;/ol&gt;
+        </ol>
+      </li>
+      &lt;/li&gt;
+      <li>&lt;li&gt;More&lt;/li&gt;</li>
+    </ul>
+    &lt;/ul&gt;
 
-   <ul> &lt;ul&gt;
-      <li>&lt;li&gt; Unordered lists, and:
-         <ol> &lt;ol&gt; Orderedlist
-            <li>&lt;li&gt;One&lt;/li&gt; </li>
-            <li>&lt;li&gt;Two&lt;/li&gt; </li>
-            <li>&lt;li&gt;Three&lt;/li&gt; </li>
-            &lt;/ol&gt;
-         </ol>
-      </li> &lt;/li&gt;
-      <li> &lt;li&gt;More&lt;/li&gt; </li>
-   </ul> &lt;/ul&gt;
-
-   <blockquote>
+    <blockquote>
       &lt;blockquote&gt;
-      <p> &lt;p&gt;Blockquote&lt;/p&gt; </p>
+      <p>&lt;p&gt;Blockquote&lt;/p&gt;</p>
       &lt;/blockquote&gt;
-   </blockquote>
+    </blockquote>
 
-   <p><strong>&lt;strong&gt;bold&lt;/strong&gt;</strong> </p>
-   <p><em>&lt;em&gt;italics&lt;/em&gt;</em> </p>
-   <p><em>&lt;em&gt;italics and later <strong>&lt;strong&gt;bold&lt;/strong&gt;&lt;/em&gt;. </strong></em>.
-   </p>
-   <p> <del>&lt;del&gt;strikethrough&lt;/del&gt;</del> </p>
-   <p> <a href="https://markdowntohtml.com">A link</a> .
-      lt;a href=&quot;https://markdowntohtml.com&quot;&gt;A link&lt;/a&gt;
-   </p>
+    <p><strong>&lt;strong&gt;bold&lt;/strong&gt;</strong></p>
+    <p><em>&lt;em&gt;italics&lt;/em&gt;</em></p>
+    <p>
+      <em
+        >&lt;em&gt;italics and later
+        <strong>&lt;strong&gt;bold&lt;/strong&gt;&lt;/em&gt;. </strong></em
+      >.
+    </p>
+    <p><del>&lt;del&gt;strikethrough&lt;/del&gt;</del></p>
+    <p>
+      <a href="https://markdowntohtml.com">A link</a> . &lt;a
+      href=&quot;https://markdowntohtml.com&quot;&gt;A link&lt;/a&gt;
+    </p>
 
-   <p>And code highlighting:</p>
+    <p>And code highlighting:</p>
 
-   <pre>&lt;pre&gt;
+    <pre>&lt;pre&gt;
    <code class="lang-js"> &lt;code&gt;
       <span class="hljs-keyword">var</span> foo = <span class="hljs-string">'bar'</span>;
 
@@ -46,13 +82,40 @@
 &lt;/code&gt;</code> 
 &lt;/pre&gt;</pre>
 
-   <p>Or inline code like <code> &lt;code&gt; var foo = &#39;bar&#39;; &lt;/code&gt;</code>.</p>
+    <p>
+      Or inline code like
+      <code> &lt;code&gt; var foo = &#39;bar&#39;; &lt;/code&gt;</code>.
+    </p>
 
-   <p>Or an image of bears</p>
-   <p><img src="http://placebear.com/200/200" alt="bears"></p>
-   &lt;p&gt;&lt;img src=&quot;http://placebear.com/200/200&quot; alt=&quot;bears&quot;&gt;&lt;/p&gt;
+    <p>Or an image of bears</p>
+    <p><img src="http://placebear.com/200/200" alt="bears" /></p>
+    &lt;p&gt;&lt;img src=&quot;http://placebear.com/200/200&quot;
+    alt=&quot;bears&quot;&gt;&lt;/p&gt;
 
-   <p>The end ...</p>
-
+    <p>The end ...</p>
+  </div>
 </github-md>
 <script src="https://cdn.jsdelivr.net/gh/MarketingPipeline/Markdown-Tag/markdown-tag.js"></script>
+<button
+  id="theme-toggle"
+  style="position: fixed; top: 10px; right: 10px; z-index: 1000"
+>
+  Toggle Theme
+</button>
+<script>
+  function setTheme(mode) {
+    document.documentElement.setAttribute("data-theme", mode);
+    localStorage.setItem("theme", mode);
+  }
+  document.getElementById("theme-toggle").onclick = function () {
+    const current = localStorage.getItem("theme") === "dark" ? "light" : "dark";
+    setTheme(current);
+  };
+  // On load, set theme from localStorage
+  setTheme(localStorage.getItem("theme") || "light");
+
+  // color: 'var(--color-fg-default)'
+  // document.documentElement.setAttribute("style", "--color-fg-default: var(--text-color)");
+  // document.documentElement.style.removeProperty("github-md.style.color");
+  // document.documentElement.style.removeProperty("github-md color");
+</script>
