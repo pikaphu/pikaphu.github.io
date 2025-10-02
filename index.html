@@ -4,17 +4,25 @@
     --text-color: #222;
     /* --color-fg-default: #222; */
   }
+
   [data-theme="dark"] {
     --bg-color: #222;
     --text-color: #fff;
     /* --color-fg-default: #fff; */
   }
 
-  :where(html, body, #myroot *):not(code,pre, pre *) {
+  body {
+    max-width: 800;
+    width: fit-content;
+    justify-self: center;
+  }
+
+  :where(html, body, #myroot *):not(code, pre, pre *) {
     background: var(--bg-color) !important;
     color: var(--text-color) !important;
     transition: background 0.3s, color 0.3s;
   }
+
   #theme-toggle {
     background: var(--bg-color);
     color: var(--text-color);
@@ -73,14 +81,13 @@
     <p>And code highlighting:</p>
 
     <pre>&lt;pre&gt;
-   <code class="lang-js"> &lt;code&gt;
-      <span class="hljs-keyword">var</span> foo = <span class="hljs-string">'bar'</span>;
-
-<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">baz</span><span class="hljs-params">(s)</span> </span>{
-   <span class="hljs-keyword">return</span> foo + <span class="hljs-string">':'</span> + s;
-}
-&lt;/code&gt;</code> 
-&lt;/pre&gt;</pre>
+    <code class="lang-js">&lt;code&gt;
+        <span class="hljs-keyword">var</span> foo = <span class="hljs-string">'bar'</span>;
+        <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">baz</span><span class="hljs-params">(s)</span> </span>{
+          <span class="hljs-keyword">return</span> foo + <span class="hljs-string">':'</span> + s;
+        }
+    &lt;/code&gt;</code>
+  &lt;/pre&gt;</pre>
 
     <p>
       Or inline code like
@@ -88,9 +95,11 @@
     </p>
 
     <p>Or an image of bears</p>
-    <p><img src="http://placebear.com/200/200" alt="bears" /></p>
-    &lt;p&gt;&lt;img src=&quot;http://placebear.com/200/200&quot;
-    alt=&quot;bears&quot;&gt;&lt;/p&gt;
+    <p>
+      <img src="http://placebear.com/200/200" alt="bears" /> <br />
+      &lt;p&gt;&lt;img src=&quot;http://placebear.com/200/200&quot;
+      alt=&quot;bears&quot;&gt;&lt;/p&gt;
+    </p>
 
     <p>The end ...</p>
   </div>
