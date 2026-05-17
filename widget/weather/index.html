@@ -2,6 +2,7 @@
     <head>
         <style>
             body {
+                text-align: -webkit-center;
                 background-color: black;
                 color: white;
             }
@@ -15,15 +16,17 @@
     <body>
         <a href="https://pikaphu.github.io"> pikaphu.github.io </a>
         <br />
-        <div id="weatherapi-weather-widget-3" class="weather-widget"></div>
-        <script type='text/javascript' src='https://www.weatherapi.com/weather/widget.ashx?loc=2366981&wid=3&tu=1&div=weatherapi-weather-widget-3' async></script>
-        <noscript><a href="https://www.weatherapi.com/weather/q/bangkok-2366981" alt="Hour by hour Bangkok weather">10 day hour by hour Bangkok weather</a></noscript>
+        <div>
+            <div id="weatherapi-weather-widget-3" class="weather-widget"></div>
+            <script type='text/javascript' src='https://www.weatherapi.com/weather/widget.ashx?loc=2366981&wid=3&tu=1&div=weatherapi-weather-widget-3' async></script>
+            <noscript><a href="https://www.weatherapi.com/weather/q/bangkok-2366981" alt="Hour by hour Bangkok weather">10 day hour by hour Bangkok weather</a></noscript>
+        </div>
 
-        <iframe>
+        <div>
             <div id="weatherapi-weather-widget-test1" class="weather-widget"></div>
             <script type='text/javascript' src='https://www.weatherapi.com/weather/widget.ashx?loc=9000176&wid=3&tu=1&div=weatherapi-weather-widget-test1' async></script>
             <noscript><a href="https://www.weatherapi.com/weather/q/{country}-{loc}" alt="Hour by hour {Country} weather">10 day hour by hour {Country} weather</a></noscript>
-        </iframe>
+        </div>
       
     </body>
 </html>
